@@ -87,6 +87,9 @@ def getTrend(ip):
 		#return [str(data2), "Ups", "Ups", "ups"]
 	
 def getip(ip):
+	# maybe you want to initialize the data2 because on exception a 
+	# 'local variable referenced before assignment' is thrown. You might
+	# want to do that with the other exceptions also
 	try:
 		furl = BASEurl + "ipr/%s" % ip
 		furl2 = BASEurl + "ipr/malware/%s" % ip
